@@ -1,0 +1,42 @@
+
+
+
+#products{
+	margin: auto;
+	width: 80%;
+	height: 350px;
+	
+	
+}
+
+#product{
+	width: 23%;
+	height: 100%;
+
+	float: left;
+	display: inline;
+}
+#product img{
+	width: 80%;
+	height: 60%;
+
+}
+.detail1{
+margin-top: 2px;
+
+}
+.detail2{
+margin-top: -10px;
+
+}
+
+#product a{
+	margin-left: 150px;
+	background-color: #FAFAFA;
+	text-decoration: none;
+}
+#product a:hover{
+	
+	background-color: #BCA9F5;
+	
+}
