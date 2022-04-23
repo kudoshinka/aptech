@@ -92,9 +92,9 @@ public function get_like($table, $column, $value ){
 		return $result;
 	}
 	
-
 		//hàm thêm dữ liệu vào Bảng
-		public function insert($table,$data=array()){
+		public function insert($table,$data=array())
+		{
 			//Bước 1:Lấy giá trị của key cho vòa 1 mảng
 			$keys = array_keys($data);
 			//Bước 2: xử lí chuỗi với mảng ở trên
@@ -152,6 +152,8 @@ public function get_like($table, $column, $value ){
 			//Bước 4: Trả về giá trị boolean
 			return $query;
 		}
+	
+
 
 
 

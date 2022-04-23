@@ -6,7 +6,7 @@ public $conn = null;
 public $serverName = 'localhost';
 public $userName = 'root';
 public $password = '';
-public $databaseName = 'pro_banhang';
+public $databaseName = 'maytinh';
 //Taoj phuong thuc khoi tao: 
 public function __construct(){
 	//Goi connect
@@ -73,28 +73,10 @@ public function get_limit($table, $condition = array(), $limit){
 	}	//Tra ve gia tri
 	return $result;
 }
-//Xây dựng phương thức tìm kiếm
-
-public function get_like($table, $column, $value ){
-	//Bước 1: Tạo câu truy vấn SQL
-		$sql = "SELECT * FROM $table";
-		//cộng chuỗi 
-		$sql .= " WHERE $column LIKE '%$value%'";
-		//Chay cau lenh
-		$query = mysqli_query($this->conn, $sql);
-		//Khởi tạo 1 biến mảng để lưu trữ kết quả của bảng muốn lấy dữ liệu
-		$result = array();
-		if ($query) {
-			while ($row = mysqli_fetch_assoc($query)) {
-				$result[] = $row;
-			}
-		}	//Tra ve gia tri
-		return $result;
-	}
-	
 
 		//hàm thêm dữ liệu vào Bảng
-		public function insert($table,$data=array()){
+		public function insert($table,$data=array())
+		{
 			//Bước 1:Lấy giá trị của key cho vòa 1 mảng
 			$keys = array_keys($data);
 			//Bước 2: xử lí chuỗi với mảng ở trên
@@ -152,9 +134,6 @@ public function get_like($table, $column, $value ){
 			//Bước 4: Trả về giá trị boolean
 			return $query;
 		}
-
-
-
 
 }
 
